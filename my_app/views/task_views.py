@@ -2,7 +2,7 @@ from .imports import *
 # Create your views here.
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated, JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def TaskIndex(request):
     try:
         task = TaskModel.objects.all()
@@ -14,7 +14,7 @@ def TaskIndex(request):
         return Response({"error":f"{e}"}, status=500)
     
 @api_view(['POST'])
-# @permission_classes([IsAuthenticated, JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def TaskStore(request):
     seri = TaskSerializer(data=request.data)
     if seri.is_valid():
@@ -25,7 +25,7 @@ def TaskStore(request):
         return Response(seri.errors, status=400)
     
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated, JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def TaskShow(request, pk):
     try:
         task = TaskModel.objects.get(pk=pk)
@@ -35,7 +35,7 @@ def TaskShow(request, pk):
         return Response({"errors":"Post Not Found!"}, status=204)
     
 @api_view(['PUT'])
-# @permission_classes([IsAuthenticated, JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def TaskUpdate(request, pk):
     try:
         task = TaskModel.objects.get(pk=pk)
@@ -49,7 +49,7 @@ def TaskUpdate(request, pk):
         return Response(seri.errors, status=400)
     
 @api_view(['DELETE'])
-# @permission_classes([IsAuthenticated, JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def TaskDelete(request, pk):
     try:
         task = TaskModel.objects.get(pk=pk)
