@@ -71,3 +71,24 @@ https://127.0.0.1:8000/api/task/all
 | Arguments | Description                  |
 | :-------- | :--------------------------- |
 | task      | **Required**                 |
+
+#### Todo app view (GET)
+
+```https
+https://127.0.0.1:8000/api/task/view/{id}
+```
+#### Todo app update (PUT)
+
+```https
+https://127.0.0.1:8000/api/task/change/{id}
+```
+#### Todo app create (POST)
+| Arguments | Description                  |
+| :-------- | :--------------------------- |
+| task      | **Required**                 |
+
+#### Todo app delete (DELETE)
+
+```https
+https://127.0.0.1:8000/api/task/delete/{id}
+```
