@@ -49,9 +49,9 @@ A REST api written in Django for people with deadlines
 
 # Django Api
 
-## API Reference
+## Todo app API Reference
 
-#### Login (Post)
+#### Login (POST)
 
 ```https
 https://127.0.0.1/api/auth/login
@@ -62,3 +62,12 @@ https://127.0.0.1/api/auth/login
 | username  | string | **Required** admin           |
 | password  | string | **Required** superuser       |
 
+#### Todo app list (GET)
+
+```https
+https://127.0.0.1:8000/api/task/all
+```
+#### Todo app create (POST)
+| Arguments | Description                  |
+| :-------- | :--------------------------- |
+| task      | **Required**                 |
