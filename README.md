@@ -14,7 +14,7 @@ A REST api written in Django for people with deadlines
     ```
 * Then, Git clone this repo to your PC
     ```bash
-        $ https://github.com/MgZayarNaing/Todo_app.git
+        $ git clone https://github.com/MgZayarNaing/Todo_app.git
     ```
 
 * #### Dependencies
